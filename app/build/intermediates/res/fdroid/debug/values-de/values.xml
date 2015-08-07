@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values-de/values.xml -->
+    <eat-comment/>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Zur Startseite"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s: %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s: %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Nach oben"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Weitere Optionen"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Fertig"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Alle ansehen"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"App auswählen"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Suchanfrage löschen"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Suchanfrage"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Suchen"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Suchanfrage senden"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Sprachsuche"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Freigeben für"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Freigeben für %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Minimieren"</string>
+    <!-- From: file:/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/src/main/res/values-de/strings.xml -->
+    <eat-comment/>
+    <string name="application_name">App Locker</string>
+    <string name="applist_app_dialer">Eingehender Anruf</string>
+    <string name="applist_app_pkginstaller">App Installation/Deinstallation</string>
+    <string name="applist_app_sysui">Aktuelle Aufgaben</string>
+    <string name="applist_lock_all">Alle</string>
+    <string name="applist_tit_apps">Apps</string>
+    <string name="applist_tit_important">Wichtig</string>
+    <string name="applist_tit_system">System</string>
+    <string name="applist_unlock_all">Keine</string>
+    <string name="apps_menu_lock_all">Alle sperren</string>
+    <string name="apps_menu_search">Suche</string>
+    <string name="apps_menu_search_hint">Suche Apps</string>
+    <string name="apps_menu_sort">Sortieren</string>
+    <string name="apps_menu_unlock_all">Alle entsperren</string>
+    <string name="apps_toast_locked_all">Alle Apps gesperrt</string>
+    <string name="apps_toast_locked_single">%s gesperrt</string>
+    <string name="apps_toast_unlocked_all">Alle Apps entsperrt</string>
+    <string name="apps_toast_unlocked_single">%s entsperrt</string>
+    <string name="background_changed">Hintergrund geändert</string>
+    <string name="background_default">Standard</string>
+    <string name="background_dialog_title">Hintergrund ändern</string>
+    <string name="background_from_gallery">Galerie</string>
+    <string name="background_locker_blue">Blau</string>
+    <string name="background_locker_dark_blue">Dunkelblau</string>
+    <string name="background_locker_green">Grün</string>
+    <string name="background_locker_orange">Orange</string>
+    <string name="background_locker_purple">Lila</string>
+    <string name="background_locker_red">Rot</string>
+    <string name="background_locker_turquoise">Türkis</string>
+    <string name="beta_desc">Das ist der Beta-Bereich dieser App. Diese experimentellen Funktionen wurden noch nicht auf allen Geräten getestet und könnte durchaus auch einige Fehler beinhalten.</string>
+    <string name="beta_tit">Beta</string>
+    <string name="button_back">Zurück</string>
+    <string name="button_confirm">Fortfahren</string>
+    <string name="button_continue">Weiter</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="change_pass_changed">Passwort wurde erfolgreich geändert</string>
+    <string name="change_pass_desc">Gib das neue Passwort ein\n4 oder mehr Zeichen werden empfohlen</string>
+    <string name="change_pass_desc_confirmation">Passwort bestätigen</string>
+    <string name="change_pass_empty">Fehler: Leeres Passwort</string>
+    <string name="change_pass_not_changed">Fehler beim ändern des Passwortes</string>
+    <string name="change_pass_not_match">Passwörter sind nicht identisch</string>
+    <string name="change_pass_tit">Passwort ändern</string>
+    <string name="cl_title">Was ist neu</string>
+    <!-- From: file:/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values-de/common_strings.xml -->
+    <eat-comment/>
+    <string msgid="6428604800157361567" name="common_android_wear_notification_needs_update_text">"Für <ns1:g id="APP_NAME">%1$s</ns1:g> ist eine Aktualisierung der Android Wear App erforderlich."</string>
+    <string msgid="2453027084525739603" name="common_android_wear_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> funktioniert erst nach der Aktualisierung der Android Wear App."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Android Wear aktualisieren"</string>
+    <string msgid="6534628256897874213" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> erfordert einen oder mehrere Google Play-Dienste, die derzeit nicht verfügbar sind. Bitte wenden Sie sich an den Entwickler, um Unterstützung zu erhalten."</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Google Play-Dienste aktivieren"</string>
+    <string msgid="4896236883690196080" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> funktioniert erst nach der Aktivierung der Google Play-Dienste."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Google Play-Dienste aktivieren"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Angefordert von <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Google Play-Dienste installieren"</string>
+    <string msgid="8836325110837822534" name="common_google_play_services_install_text_phone">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind Google Play-Dienste erforderlich, die auf Ihrem Smartphone nicht installiert sind."</string>
+    <string msgid="542176290824754127" name="common_google_play_services_install_text_tablet">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind Google Play-Dienste erforderlich, die auf Ihrem Tablet nicht installiert sind."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Google Play-Dienste installieren"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Das angegebene Konto ist auf diesem Gerät nicht vorhanden. Bitte wählen Sie ein anderes Konto aus."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Ungültiges Konto"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"App erfordert die Aktivierung der Google Play-Dienste"</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Um eine Verbindung zu den Google Play-Diensten herzustellen, ist eine Datenverbindung erforderlich."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Netzwerkfehler"</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"App erfordert ein Update der Google Play-Dienste"</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Fehler bei Zugriff auf Google Play-Dienste"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Fehler beim Anmelden im angegebenen Konto. Bitte wählen Sie ein anderes Konto aus."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Anmeldung fehlgeschlagen"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Unbekanntes Problem mit Google Play-Diensten"</string>
+    <string msgid="7682982632307307938" name="common_google_play_services_unsupported_text">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind Google Play-Dienste erforderlich. Diese werden auf Ihrem Gerät jedoch nicht unterstützt. Wenden Sie sich für weitere Informationen an den Hersteller."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play-Dienste"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Aktualisieren"</string>
+    <string msgid="5709479369299147668" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> wird nur ausgeführt, wenn Sie die Google Play-Dienste aktualisieren."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Google Play-Dienste aktualisieren"</string>
+    <string msgid="2201289642219771610" name="common_google_play_services_updating_text">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind Google Play-Dienste erforderlich, die gerade aktualisiert werden."</string>
+    <string msgid="815008177440683245" name="common_google_play_services_updating_title">"Google Play-Dienste werden aktualisiert"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Auf Telefon öffnen"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Anmelden"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Über Google anmelden"</string>
+    <!-- From: file:/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/src/main/res/values-de/strings.xml -->
+    <eat-comment/>
+    <string name="fragment_title_apps">Applikationen</string>
+    <string name="fragment_title_pro">Pro</string>
+    <string name="fragment_title_settings">Einstellungen</string>
+    <string name="fragment_title_statistics">Statistiken</string>
+    <string name="locker_enter_password">Passwort eingeben</string>
+    <string name="locker_footer_default">Zum Entsperren Passwort eingeben</string>
+    <string name="locker_invalid_password">Falsches Passwort</string>
+    <string name="locker_invalid_pattern">Falsches Muster</string>
+    <string name="main_button_set_password">Passwort ändern</string>
+    <string name="main_button_set_pattern">Muster ändern</string>
+    <string name="main_no_locked_apps">Du hast keine Apps geschützt.\nMöchtest Du jetzt paar Apps schützen?</string>
+    <string name="main_no_password">Du hast noch kein Passwort gesetzt.\nMöchtest Du jetzt ein Passwort einrichten?</string>
+    <string name="main_preferences">Einstellungen</string>
+    <string name="main_rate">Bewerten</string>
+    <string name="main_setup">Einrichtung</string>
+    <string name="main_share">Teilen</string>
+    <string name="main_state_not_running">Gestoppt</string>
+    <string name="main_state_running">Läuft</string>
+    <!-- From: file:/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values-de/values.xml -->
+    <eat-comment/>
+    <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Übertragen"</string>
+    <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Geräte werden gesucht…"</string>
+    <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"Mit Gerät verbinden"</string>
+    <string msgid="109793632378378069" name="mr_media_route_controller_disconnect">"Verbindung aufheben"</string>
+    <string msgid="8315773974194466049" name="mr_media_route_controller_pause">"Pause"</string>
+    <string msgid="5214423499524760404" name="mr_media_route_controller_play">"Wiedergabe"</string>
+    <string msgid="379358765881274425" name="mr_media_route_controller_settings_description">"Routingeinstellungen"</string>
+    <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Übertragung stoppen"</string>
+    <string msgid="5441529851481176817" name="mr_system_route_name">"System"</string>
+    <string msgid="7498112907524977311" name="mr_user_route_category_name">"Geräte"</string>
+    <!-- From: file:/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/src/main/res/values-de/strings.xml -->
+    <eat-comment/>
+    <string name="nav_apps">Applikationen</string>
+    <string name="nav_change">Sperre ändern</string>
+    <string name="nav_pro">Pro</string>
+    <string name="nav_settings">Einstellungen</string>
+    <string name="nav_statistics">Statistiken</string>
+    <string name="nav_status">Sperre</string>
+    <string name="nav_test">Testen</string>
+    <string name="notification_state_locked">Klicke hier um Locker zu deaktivieren</string>
+    <string name="notification_title">Locker ist aktiv</string>
+    <string name="old_main_choose_lock_type">Wähle einen Sperr-Typ</string>
+    <string name="old_pref_desc_delay_status">Wenn du das korrekte Passwort eingibst, wirst du erst nach einer gewissen Zeit erneut gefragt</string>
+    <string name="old_pref_desc_dial_launch">Wenn diese Einstellung aktiviert ist, kannst du Locker starten indem du einen Anruf an #DEINPASSWORT startest.\nWenn dein Passwort zum Beispiel 1111 ist, kannst du Locker öffnen indem du #1111 anrufst.</string>
+    <string name="old_pref_desc_vibrate_password">Bei Tastendruck vibrieren</string>
+    <string name="old_pref_dlgmsg_delay_time">Du wirst erst nach der angegebenen Zeit wieder nach dem Passwort gefragt (Sekunden)</string>
+    <string name="old_pref_tit_delay_status">Sperre verzögern</string>
+    <string name="old_pref_tit_delay_time">Zeitverzögerung</string>
+    <string name="old_pref_tit_dial_launch">Mit Anruf starten</string>
+    <string name="old_pref_tit_vibrate_password">Vibration</string>
+    <string name="password_change_confirm">Gib das Passwort erneut ein</string>
+    <string name="password_change_error">Fehler beim Speichern des Passwortes</string>
+    <string name="password_change_head">Gib ein neues Passwort ein</string>
+    <string name="password_change_not_match">Die Passwörter sind nicht identisch</string>
+    <string name="password_change_saved">Passwort erfolgreich geändert</string>
+    <string name="password_change_tit">Passwort ändern</string>
+    <string name="password_empty">Passwort darf nicht leer sein</string>
+    <string name="pattern_change_confirm">Wähle das Muster erneut zur Bestätigung aus</string>
+    <string name="pattern_change_error">Fehler beim Speichern des Musters</string>
+    <string name="pattern_change_head">Neues Muster aufzeichnen</string>
+    <string name="pattern_change_not_match">Die beiden Muster waren nicht identisch</string>
+    <string name="pattern_change_saved">Muster erfolgreich geändert</string>
+    <string name="pattern_change_tit">Muster ändern</string>
+    <string name="pattern_detected">Muster erkannt</string>
+    <string name="pref_def_lock_message">Passwort zum Entsperren eingeben</string>
+    <string name="pref_desc_ads">Wenn Du Locker magst, unterstütze mich bitte, indem Du die Werbung aktivierst</string>
+    <string name="pref_desc_ads_forced">Du kannst derzeit die Werbung nicht deaktivieren</string>
+    <string name="pref_desc_anim_millis">Zeit in Millisekunden für die Animation</string>
+    <string name="pref_desc_anim_type">%s</string>
+    <string name="pref_desc_delay_status">Du kannst eine App verlassen und innerhalb der Zeitspanne zurück in die App gehen, ohne das Passwort ein weiteres Mal eingeben zu müssen</string>
+    <string name="pref_desc_dial_launch">Greife mit Hilfe eines Anrufes auf Locker zu</string>
+    <string name="pref_desc_dial_launch_number">Die Nummer, die zum Öffnen der App notwendig ist (Wir empfehlen, die Nummer mit # zu beginnen)</string>
+    <string name="pref_desc_hide_launcher_icon">Sobald diese Option aktiviert ist, wird das Icon zum Starten von Locker aus dem Launcher versteckt. Die abgelegten Verknüpfungen am Homescreen müssen hingegen manuell entfernt werden (Benötigt evtl. einen Neustart. Aktiviert die Option "Mit Anruf starten")</string>
+    <string name="pref_desc_hide_notification_icon">Die Option versteckt nur das Benachrichtigungssymbol in der Statusleiste</string>
+    <string name="pref_desc_lock_message">Diese Nachricht erscheint, wenn eine App gesperrt ist</string>
+    <string name="pref_desc_lock_type">Derzeit: %s</string>
+    <string name="pref_desc_lockactivity_background">Hintergrundbild, was am Sperrbildschirm einer App angezeigt wird</string>
+    <string name="pref_desc_max_password_retries">Die Anzahl an Versuchen die Du hast, um das richtige Passwort einzugeben</string>
+    <string name="pref_desc_password_expiry">Die Zeitspanne, in der Du das richtige Passwort eingeben musst.</string>
+    <string name="pref_desc_pattern_color">Die Farbe des Musters</string>
+    <string name="pref_desc_pattern_hide_error">Keinen Fehler anzeigen, wenn ein falsches Muster eingegeben wurde</string>
+    <string name="pref_desc_pattern_size">Die Nummer der Spalten und Zeilen, welches das Muster hat</string>
+    <string name="pref_desc_pattern_stealth">Das Auswahl des Musters ist unsichtbar</string>
+    <string name="pref_desc_performance">Höhere Leistung bietet mehr Geschwindigkeit, verbraucht aber mehr Akku. Der Sparmodus ist dagegen sparsamer, aber auch langsamer</string>
+    <string name="pref_desc_recovery_code">Aktueller Code: %s</string>
+    <string name="pref_desc_relock_after_screenoff">Frage erneut nach dem Passwort, nachdem der Bildschirm ausgeschaltet wurde</string>
+    <string name="pref_desc_show_notification">Zeige Benachrichtigungen in der Statusleiste</string>
+    <string name="pref_desc_start_boot">Apps sperren, wenn das Gerät startet</string>
+    <string name="pref_desc_switch_buttons">Tauscht die Position der "OK" und "Beenden" Knöpfe</string>
+    <string name="pref_desc_temp_wifi_ssid">Der Name des WLAN-Netzwerkes</string>
+    <string name="pref_desc_temp_wifi_unlock_state">Wenn du dich zu einem der angegebenen WLAN-Netzwerke verbindest, wird die Sperre deaktiviert</string>
+    <string name="pref_desc_vibrate_password">Vibriere beim Drücken einer Taste</string>
+    <string name="pref_desc_vibrate_pattern">Vibriere, wenn du das Muster eingibst</string>
+    <string name="pref_dlgmsg_delay_time">Gib die Anzahl der Sekunden ein, nachdem ein App wieder gesperrt werden soll</string>
+    <string name="pref_dlgmsg_lock_message">Du kannst %s als App-Namen verwenden.</string>
+    <string name="pref_dlgmsg_max_password_retries">0 bedeutet unbgegrenzt</string>
+    <string name="pref_dlgmsg_password_expiry">Zeit in Sekunden, 0 bedeutet unbegrenzt</string>
+    <string name="pref_dlgmsg_recovery_code">Dein aktueller Code ist: %s</string>
+    <string name="pref_list_anim_fade">Verblassen</string>
+    <string name="pref_list_anim_none">Deaktiviert</string>
+    <string name="pref_list_anim_slide_left">Nach links ausblenden</string>
+    <string name="pref_list_anim_slide_right">Nach rechts ausblenden</string>
+    <string name="pref_list_lock_type_password">Passwort</string>
+    <string name="pref_list_lock_type_pattern">Muster</string>
+    <string name="pref_list_orientation_auto_rotate">Auto-Rotate</string>
+    <string name="pref_list_orientation_landscape">Querformat</string>
+    <string name="pref_list_orientation_portrait">Portrait</string>
+    <string name="pref_list_orientation_system">System-Einstellungen</string>
+    <string name="pref_list_pattern_color_blue">Blau</string>
+    <string name="pref_list_pattern_color_green">Grün</string>
+    <string name="pref_list_pattern_color_white">Weiß</string>
+    <string name="pref_list_perf_high">Hoch</string>
+    <string name="pref_list_perf_low">Niedrig</string>
+    <string name="pref_list_perf_normal">Normal</string>
+    <string name="pref_list_perf_very_high">Sehr hoch</string>
+    <string name="pref_list_perf_very_low">Sparmodus</string>
+    <string name="pref_tit_ads">Werbung</string>
+    <string name="pref_tit_anim_millis">Dauer</string>
+    <string name="pref_tit_anim_type">Typ</string>
+    <string name="pref_tit_cat_about">Über die App</string>
+    <string name="pref_tit_cat_anim_hide">Animation verlassen</string>
+    <string name="pref_tit_cat_anim_show">Animation betreten</string>
+    <string name="pref_tit_cat_general">Allgemein</string>
+    <string name="pref_tit_cat_launcher">Start</string>
+    <string name="pref_tit_cat_notification">Benachrichtigung</string>
+    <string name="pref_tit_cat_password">Passwort-Einstellungen</string>
+    <string name="pref_tit_cat_pattern">Muster-Einstellungen</string>
+    <string name="pref_tit_delay_status">Kurzes Verlassen</string>
+    <string name="pref_tit_delay_time">Kurze Verlassen-Zeit</string>
+    <string name="pref_tit_dial_launch">Starte mit einem Anruf</string>
+    <string name="pref_tit_dial_launch_number">Nummer</string>
+    <string name="pref_tit_hide_launcher_icon">Verstecke Icon</string>
+    <string name="pref_tit_hide_notification_icon">Benachrichtigungssymbol verstecken</string>
+    <string name="pref_tit_lock_message">Nachricht</string>
+    <string name="pref_tit_lock_type">Sperr-Typ</string>
+    <string name="pref_tit_lockactivity_background">Hintergrund</string>
+    <string name="pref_tit_max_password_retries">Maximale Versuche</string>
+    <string name="pref_tit_orientation">Orientierung</string>
+    <string name="pref_tit_password_expiry">Maximale Zeit</string>
+    <string name="pref_tit_pattern_color">Muster-Farbe</string>
+    <string name="pref_tit_pattern_hide_error">Fehler verstecken</string>
+    <string name="pref_tit_pattern_size">Muster-Größe</string>
+    <string name="pref_tit_pattern_stealth">Unsichtbar-Modus</string>
+    <string name="pref_tit_performance">Leistung</string>
+    <string name="pref_tit_recovery_code">Wiederherstellungscode</string>
+    <string name="pref_tit_relock_after_screenoff">Sperren ausg. Bildschirm</string>
+    <string name="pref_tit_show_notification">Zeige Benachrichtigung</string>
+    <string name="pref_tit_start_boot">Beim Start ausführen</string>
+    <string name="pref_tit_switch_buttons">Tausche Knöpfe</string>
+    <string name="pref_tit_temp_wifi_ssid">SSID (Netzwerkname)</string>
+    <string name="pref_tit_temp_wifi_unlock_state">Bei WLAN beenden</string>
+    <string name="pref_tit_vibrate_password">Vibration</string>
+    <string name="pref_tit_vibrate_pattern">Vibration</string>
+    <string name="preferences_tit">Einstellungen</string>
+    <string name="pro_b_main">Pro</string>
+    <string name="pro_desc_ads">Alle Pro-Funktionen sind verfügbar, aber Werbung wird eingeblendet</string>
+    <string name="pro_desc_free">Keine Pro-Funktionen sind verfügbar, dafür wird auch keine Werbung eingeblendet</string>
+    <string name="pro_desc_paid">Alle Pro-Funktionen sind verfügbar und es wird keine Werbung angezeigt</string>
+    <string name="pro_ft_anim">Animationen</string>
+    <string name="pro_ft_bg">Benutzerdefiniertes Hintergrundbild</string>
+    <string name="pro_ft_hide">Verstecke Locker-App</string>
+    <string name="pro_ft_hide_notif">Verstecke Benachrichtigung</string>
+    <string name="pro_ft_more">Mehr kommt bald</string>
+    <string name="pro_ft_pcolor">Muster-Farbe ändern</string>
+    <string name="pro_ft_short_exit">Schnelles Beenden</string>
+    <string name="pro_ft_tit">Pro Funktionen:</string>
+    <string name="pro_header">Wähle deinen Plan:</string>
+    <string name="pro_required">Das ist ein eine Pro-Funktionalität. Möchtest Du die Pro-Funktionen kostenlos aktivieren?</string>
+    <string name="pro_tit_ads">Locker Ads</string>
+    <string name="pro_tit_free">Locker Free</string>
+    <string name="pro_tit_paid">Locker Pro</string>
+    <string name="pro_tofree_msg">Du verlierst alle Pro-Funktionen.\nBist Du dir sicher, dass Du in den kostenlosen Modus wechseln möchtest?</string>
+    <string name="pro_tofree_tit">Kostenloser Modus</string>
+    <string name="pro_window_title">Pro Funktionen</string>
+    <string name="recovery_code_send_button">Senden</string>
+    <string name="recovery_dlgmsg">Dein Wiederherstellungscode ist %s\nEs ist wichtig, dass Du den Code sicher aufbewahrst (falls Du dein Passwort vergessen solltest), aber Du kannst diesen Code jederzeit in den Einstellungen einsehen.</string>
+    <string name="recovery_intent_message">Dein Twinone App Locker Wiederherstellungscode.\nUm auf dein Gerät wieder zugreifen und um das Passwort wieder ändern zu können, öffne bitte das Wahlfeld und rufe folgende Nummer an: %s</string>
+    <string name="recovery_intent_tit">Wiederherstellungscode senden</string>
+    <string name="recovery_tit">Wiederherstellungscode</string>
+    <string name="select_tit">Gesperrte Apps</string>
+    <string name="setup_new_lock">Neue Sperre einrichten</string>
+    <string name="update_available">Aktualisierung verfügbar</string>
+    <string name="update_available_msg">Es ist eine neue Aktualisierung für diese App verfügbar. Diese Version wird in %d Tagen nicht mehr unterstützt.</string>
+    <string name="update_button">Aktualisieren</string>
+    <string name="update_button_cancel">Jetzt nicht</string>
+    <string name="update_needed">Aktualisierung benötigt</string>
+    <string name="update_needed_msg">Diese Version wird nicht länger unterstützt. Bitte aktualisiere zur aktuellsten Version.</string>
+    <string name="upper_back">ZURÜCK</string>
+    <string name="upper_ok">OK</string>
+    <string name="vc_exit">Beenden</string>
+    <string name="vc_later">Später</string>
+    <string name="vc_msg_new_version">Es ist eine neue Version verfügbar. Möchtest du nun aktualisieren?</string>
+    <string name="vc_msg_unsupported">Die Version dieser App ist alt und muss aktualisiert werden. Bitte aktualisiere, um die App weiterhin nutzen zu können.</string>
+    <string name="vc_tit_new_version">Aktualisieren</string>
+    <string name="vc_tit_unsupported">Tut mir Leid</string>
+    <string name="vc_update">Aktualisieren</string>
+    <string name="welcome_message">Du benötigst ein Passwort bevor du Apps sperren kannst.\nMöchtest du nun ein Passwort setzen?</string>
+    <string name="welcome_tit">Willkommen beim Locker!</string>
+</resources>

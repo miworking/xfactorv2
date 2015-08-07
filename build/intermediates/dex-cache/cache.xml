@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-26da160fc5c1a961c626d13b1bdbd37977137b4b.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-924e9ce0fa3c3452d2103e40bcbaa7a4139e3f4a.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-e032c6dad52ee7a84e2c87cef73171d647806e4f.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-4c685c12f1111555777ededc98450a7341031718.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-990bf7eb55e0d4d63272a7e8ff2cf255cdb7979d.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-6ca935c64a9d02f5ed41110261ed0ffebb7a36e0.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-e3c39a9e5442c1075f36f37baf6a0c8b73b78cb2.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/internal_impl-22.0.0-93646bb5754f5615df8d33abce1e267acda404ab.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-3ab12c695f801d8a9e48240c84a8f9b489c9fbe1.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-0d20bd5eb112ffdb85484481b288f60706013fc1.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-a140e44540e1f8ffa7e7f4b2307bca8bb7724fcc.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-68071df50a0cc532d2af8af217166e097a9479dc.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-bd9fa44c3e3a966d6503789607a62902bc665488.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-603472cbf32c3bd2f57cbc668909162cbcb3d09a.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-20a37530a40f420e0538f8ac11cf6e6d98c396a3.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/gson-2.3-026d88cf59ea133a403312c39993f1e639c8838f.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/support-annotations-22.0.0-92ae0692550b4baa9fcd7210612e36c4263b609d.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/internal_impl-22.0.0-554c228700f761bd3712576abb664871c8df2437.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-fa4d8ba1d45e22ad52d78fe088253708693d1bd9.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-b56a1b0572e6618adf7c55a40432546380dcb116.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-43998dfe2dd9f2c7a21584f720e7fd86ea15e437.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-8d1610369c7d7086294d9978a9c3da3de52a7b82.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-b13f9a060db5b4da60cd8b558d49b5f83a92a8a8.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-2bd804ceaaf3778c7165d47990c722960ed07102.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-9bdf727e73184b9c19d18f5a37ebf84b8b9c3759.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-f83653e2d8867a7a679db3b96d60cb29641ffae3.jar" />
+    </item>
+    <item
+        jar="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/build/intermediates/pre-dexed/fdroid/debug/classes-0989e64d48e7cade39d05483ac5259bc7ed3bdf9.jar" />
+    </item>
+
+</items>

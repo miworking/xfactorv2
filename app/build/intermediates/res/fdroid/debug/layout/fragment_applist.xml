@@ -1,0 +1,8 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lvAppList"
+    style="@style/ApplistTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+</ListView>
+<!-- From: file:/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/src/main/res/layout/fragment_applist.xml -->
