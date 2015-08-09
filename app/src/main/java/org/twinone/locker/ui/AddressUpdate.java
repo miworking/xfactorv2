@@ -225,11 +225,8 @@ Log.i("Context", String.valueOf(c));
             if ( mCurrentLocation != null) {
                 // Determine whether a Geocoder is available.
                 if (!Geocoder.isPresent()) {
-<<<<<<< HEAD
                     //Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
-=======
-//                    Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
->>>>>>> origin/master
+
                     return;
                 }
                 // It is possible that the user presses the button to get the address before the
@@ -265,11 +262,8 @@ Log.i("Context", String.valueOf(c));
         // Pass the location data as an extra to the service.
         intent.putExtra(Constants.LOCATION_DATA_EXTRA, mCurrentLocation);
 
-<<<<<<< HEAD
         //Toast.makeText(c,"-----"+mCurrentLocation.getLatitude(),Toast.LENGTH_SHORT).show();
-=======
-       // Toast.makeText(c,"-----"+mCurrentLocation.getLatitude(),Toast.LENGTH_SHORT).show();
->>>>>>> origin/master
+
 
         Log.i("inside strtintenservice", "" + mCurrentLocation.getLatitude());
         Log.i("inside strtintenservice",""+mCurrentLocation.getLongitude());
@@ -566,13 +560,9 @@ private void openAlert(final String address, final String name, Context c) {
                 }else{
                     work.put(mAddressOutput,1);
                 }
-<<<<<<< HEAD
                // Toast.makeText(c,workAddress,Toast.LENGTH_LONG).show();
                 Log.i("WORK LEARNED", workAddress);
-=======
-                //Toast.makeText(c,workAddress,Toast.LENGTH_LONG).show();
 
->>>>>>> origin/master
                 Log.i("Work map size",Integer.toString(worksize));
                 for(String s:work.keySet()){
                     int freq=work.get(s);

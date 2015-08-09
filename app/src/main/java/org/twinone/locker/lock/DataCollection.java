@@ -45,10 +45,11 @@ public class DataCollection
     String packageName;
     String confirmWifi;
 
+
     public DataCollection(Context c){
         this.c=c;
     }
-    public void collectData(String curWifi, int wifi_score, String locationStatus, String blueToothStatus, String onBodyStatus, int xFactor, String app_cate, int app_score,String androidId, String packageName, String confirmWifi){
+    public void collectData(String curWifi, int wifi_score, int intGps, String blueToothStatus, String onBodyStatus, int xFactor, String app_cate, int app_score,String androidId, String packageName, String confirmWifi){
         this.confirmWifi = confirmWifi;
 
         this.curWifi=curWifi;
