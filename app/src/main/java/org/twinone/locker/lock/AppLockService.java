@@ -489,7 +489,7 @@ public class AppLockService extends Service {
         //data collection
         DataCollection d=new DataCollection(this);
         String androidId = Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
-        d.collectData(curWifi,wifi_score,locationStatus,blueToothStatus,onBodyStatus,xFactor,app_cate,app_score,androidId,getTopPackageName());
+        d.collectData(curWifi,wifi_score,intGps,blueToothStatus,onBodyStatus,xFactor,app_cate,app_score,androidId,getTopPackageName());
 
 
 
