@@ -102,7 +102,10 @@ public class DataCollection
         layout.addView(line);
 
         final TextView t = new TextView(c);
-        t.setText("Current Condition is:" + "\n" + "WiFi Status:" + curWifi + "\n" + "Location Status:" + locationStatus + "\n" + "Bluetooth Status:" + blueToothStatus + "\n" + "OnBody Status:" + onBodyStatus+"\n"+"Do you want to open this app under these conditions, Choose Below ");
+        String parts[] = packageName.split("\\.");
+        String appName = "N/A";
+        if(parts.length>0)  appName =  parts[(parts.length-1)];
+        t.setText("App Name is: " +appName+ "\n"+"Current Condition is:" + "\n" + "WiFi Status:" + curWifi + "\n" + "Location Status:" + locationStatus + "\n" + "Bluetooth Status:" + blueToothStatus + "\n" + "OnBody Status:" + onBodyStatus+"\n"+"Do you want to open this app under these conditions, Choose Below ");
         t.setTypeface(null, Typeface.BOLD);
         t.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
        // t.setTextColor(0xFF00FF00);

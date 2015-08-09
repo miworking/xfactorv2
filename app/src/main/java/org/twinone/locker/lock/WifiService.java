@@ -35,6 +35,9 @@ import java.util.List;
 public class WifiService extends Service {
     static final public String THE_MESSAGE = "haha1";
     static public String confirmWifi = "N/A";
+    static public String confirmWifiH = "N/A";
+    static public String confirmWifiW = "N/A";
+
     SimpleDateFormat sdf = new SimpleDateFormat("dd:MM:yyyy |HH|:mm:ss a");
     SimpleDateFormat sdf_day = new SimpleDateFormat("dd:MM:yyyy");
 
@@ -182,7 +185,7 @@ public class WifiService extends Service {
         public void run ( ) {
             update();
 
-            handler.postDelayed(this,1000*5);
+            handler.postDelayed(this,1000*60*10);
 //postDelayed(this,1000)方法安排一个Runnable对象到主线程队列中
         }
     };
@@ -417,8 +420,11 @@ public class WifiService extends Service {
 //                        Toast.makeText(this, name + "is a trusted Device.",
 //                                Toast.LENGTH_LONG).show();
                         // current activity
-
-                        confirmWifi = "YES";
+                        if(cate.equals("work")) {
+                            confirmWifiW = "YES";
+                        }
+                        else confirmWifiH = "YES";
+                        confirmWifi = "H: "+ confirmWifiH+":W: "+confirmWifiW;
                         dialog.dismiss();
 
                     }
@@ -430,8 +436,11 @@ public class WifiService extends Service {
                         //knownBtDevicesMap.put(address, false);
 //                        Toast.makeText(c, name + "is a untrusted Device.",
 //                                Toast.LENGTH_LONG).show();
-                        confirmWifi = "NO";
-
+                        if(cate.equals("work")) {
+                            confirmWifiW = "NO";
+                        }
+                        else confirmWifiH = "NO";
+                        confirmWifi = "H: "+ confirmWifiH+":W: "+confirmWifiW;
                         dialog.dismiss();
                     }
                 });
