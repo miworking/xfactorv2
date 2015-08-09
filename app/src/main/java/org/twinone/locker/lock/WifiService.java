@@ -1,8 +1,10 @@
 package org.twinone.locker.lock;
 
+import android.app.AlertDialog;
 import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
@@ -11,6 +13,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 
@@ -31,6 +34,7 @@ import java.util.List;
  */
 public class WifiService extends Service {
     static final public String THE_MESSAGE = "haha1";
+    static public String confirmWifi = "N/A";
     SimpleDateFormat sdf = new SimpleDateFormat("dd:MM:yyyy |HH|:mm:ss a");
     SimpleDateFormat sdf_day = new SimpleDateFormat("dd:MM:yyyy");
 
@@ -116,6 +120,10 @@ public class WifiService extends Service {
                 Calendar c = Calendar.getInstance();
                 String strDate = sdf_day.format(c.getTime());
                 Log.v("mycontent",max_name_d+","+max_name_n+","+strDate);
+
+                openAlert( "work" ,max_name_d);
+                openAlert( "home",max_name_n) ;
+
 
                 writeToFile("wifiTable", max_name_d + "," + max_name_n + "," + strDate, Context.MODE_PRIVATE);
 
@@ -245,6 +253,8 @@ public class WifiService extends Service {
     public void onCreate() {
 
         String content = "work,home,02:07:2015";
+
+
         writeToFile("wifiTable",content,MODE_PRIVATE);
         String test_content = "\"CMU-SECURE\",02:08:2015 |19|:44:08 PM"+"\n"
                 +"\"CMU-SECURE\",02:08:2015 |19|:44:08 PM"+"\n"
@@ -388,4 +398,49 @@ public class WifiService extends Service {
 //        // Send the notification.
 //        mNM.notify(NOTIFICATION, notification);
 //    }
+
+    private void openAlert(final String cate, final String name) {
+        boolean result=false;
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        // set title
+        alertDialogBuilder.setTitle("WiFi Confirmation");
+
+        // set dialog message
+        alertDialogBuilder
+                .setMessage("Is "+name+" your "+cate+"wifi network?")
+                .setCancelable(false)
+                .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        // if this button is clicked, close
+
+                        //knownBtDevicesMap.put(address, true);
+//                        Toast.makeText(this, name + "is a trusted Device.",
+//                                Toast.LENGTH_LONG).show();
+                        // current activity
+
+                        confirmWifi = "YES";
+                        dialog.dismiss();
+
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // if this button is clicked, just close
+                        // the dialog box and do nothing
+                        //knownBtDevicesMap.put(address, false);
+//                        Toast.makeText(c, name + "is a untrusted Device.",
+//                                Toast.LENGTH_LONG).show();
+                        confirmWifi = "NO";
+
+                        dialog.dismiss();
+                    }
+                });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+
+        // show it
+        alertDialog.show();
+    }
 }

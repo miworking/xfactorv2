@@ -82,7 +82,8 @@ public class BluetoothService extends Service {
     // Keep updating Bluetooth paired condition
     private void update(){
 
-       // Toast.makeText(this, "updating....", Toast.LENGTH_SHORT).show();
+
+        //Toast.makeText(this, "function called....", Toast.LENGTH_SHORT).show();
         function();
 
         Calendar c = Calendar.getInstance();

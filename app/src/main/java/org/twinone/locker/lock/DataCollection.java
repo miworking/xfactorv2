@@ -40,12 +40,13 @@ public class DataCollection
     int app_score;
     String androidId;
     String packageName;
+    String confirmWifi;
 
     public DataCollection(Context c){
         this.c=c;
     }
-    public void collectData(String curWifi, int wifi_score, String locationStatus, String blueToothStatus, String onBodyStatus, int xFactor, String app_cate, int app_score,String androidId, String packageName){
-
+    public void collectData(String curWifi, int wifi_score, String locationStatus, String blueToothStatus, String onBodyStatus, int xFactor, String app_cate, int app_score,String androidId, String packageName, String confirmWifi){
+        this.confirmWifi = confirmWifi;
         this.curWifi=curWifi;
         this.wifi_score=wifi_score;
         //Zero is home
@@ -140,8 +141,11 @@ public class DataCollection
                         testObject.put("OnBody",onBodyStatus);
                         testObject.put("Xfactor",xFactor);
                         testObject.put("Category",app_cate);
+                        testObject.put("confirmWifiValue",confirmWifi);
                         testObject.put("CurrentScore",app_score);
                         testObject.saveInBackground();
+
+
                     }
 
                 });

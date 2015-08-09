@@ -62,10 +62,14 @@ public class AppLockService extends Service {
     private HashMap<String,String> appTable;
 
 
+
     //private List<String> l = new ArrayList<String>();
 
 
     private void readFile(HashMap<String,String> map) throws IOException{
+        if( List_CAtegoriy.UPDATING = true )
+            Log.d(TAG, "updating");
+
 
         FileInputStream fis = null;
         try {
@@ -117,29 +121,35 @@ public class AppLockService extends Service {
         String[] parts = readFromFile("wifiTable").split(",");
         String work =parts[0];
         String home = parts[1];
-        wifiTable.put(work,8);
-        wifiTable.put(home,10);
+        wifiTable.put(work,40);
+        wifiTable.put(home,50);
 
-        gpsTable.put(0,10);
-        gpsTable.put(1,8);
-        gpsTable.put(2,0);
+        gpsTable.put(0,9);
+        gpsTable.put(1,6);
+        gpsTable.put(2,3);
 
         test_appTable.put("com.android.chrome", 9);
         test_appTable.put("com.android.mms", 20);
         test_appTable.put("com.google.android.gm", 35);
         test_appTable.put("com.android.dialer", 20);
 
-        cateTable.put("Tools", 20);
-        cateTable.put("Media & Video", 20);
-        cateTable.put("Health & Fitness", 5);
-        cateTable.put("Travel & Local", 20);
-        cateTable.put("Entertainment", 5);
-        cateTable.put("Sports", 5);
-        cateTable.put("Music & Audio", 5);
-        cateTable.put("Communication", 30);
-        cateTable.put("Productivity", 30);
-        cateTable.put("News & Magazines", 5);
-        cateTable.put("Books & Reference", 5);
+        cateTable.put("Finance", 60);
+        cateTable.put("Medical", 55);
+        cateTable.put("Communication", 50);
+        cateTable.put("Social", 45);
+        cateTable.put("Productivity", 40);
+        cateTable.put("Business", 35);
+        cateTable.put("Shopping", 30);
+        cateTable.put("Photography", 30);
+        cateTable.put("Transportation", 30);
+        cateTable.put("Photography", 30);
+        cateTable.put("Health & Fitness", 30);
+        cateTable.put("Music & Audio", 25);
+        cateTable.put("Libraries & Demo", 25);
+        cateTable.put("News & Magazines", 25);
+
+
+
 
 
 
@@ -214,7 +224,7 @@ public class AppLockService extends Service {
      */
     private Map<String, Boolean> mLockedPackages;
     private Map<String, Runnable> mUnlockMap;
-    boolean mBound = false;
+    private boolean mBound = false;
     BluetoothService mService;
     private ServiceConnection mConnection = new ServiceConnection() {
         // Called when the connection with the service is established
@@ -225,11 +235,13 @@ public class AppLockService extends Service {
             BluetoothService.BluetoothBinder binder = (BluetoothService.BluetoothBinder) service;
             mService = binder.getService();
             mBound = true;
+            Log.d(TAG, "onServiceConnected");
+
         }
 
         // Called when the connection with the service disconnects unexpectedly
         public void onServiceDisconnected(ComponentName className) {
-            Log.e(TAG, "onServiceDisconnected");
+            Log.d(TAG, "onServiceDisconnected");
             mBound = false;
         }
     };
@@ -300,11 +312,18 @@ public class AppLockService extends Service {
 
     @Override
     public void onCreate() {
+        Log.d(TAG, "onCreateHaha"+mBound);
+
+//        Intent i =new Intent(this,List_CAtegoriy.class);
+//        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//       this.startActivity(i);
+
         initHashMap();
-        Intent intent = new Intent(this, BluetoothService.class);
-        bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+
+       Intent intent = new Intent(this, BluetoothService.class);
+       if (!mBound) bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+
         super.onCreate();
-        Log.d(TAG, "onCreate");
 
     }
 
@@ -428,22 +447,21 @@ public class AppLockService extends Service {
     }
 
     private void onLockedAppOpen(final String open) {
-        Toast.makeText(this, " here ", Toast.LENGTH_SHORT).show();
+        //list_category.validate();
+        //if package.size = file.map.size do nothing
+        //else start t to undate file( size is not right and no file is there
+        // when finish set UPDATING to false
+
         onbody b=new onbody(this);
-
-
-
-
-
 
         boolean bt = mService.hasTrustedDevices();
         int xFactor = 1;
 
         String onBodyStatus = "" + b.onBody;
-        int body_score = b.onBody? 10 : 1;
+        int body_score = b.onBody? 0 : 0;
 
         String wifiStatus = readFromFile("wifiTable");
-        int wifi_score = 0;
+        int wifi_score = 30;
         WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
         String curWifi = wifi.getConnectionInfo().getSSID();
         if (wifiTable.containsKey(curWifi)) wifi_score = wifiTable.get(curWifi);
@@ -455,16 +473,18 @@ public class AppLockService extends Service {
 
 
         String blueToothStatus = ""+bt;
-        int bt_score = bt? 5:0;
+        int bt_score = bt? 28:0;
 
         String pickingUpStatus = "N/A";
         String app_cate = "N/A";
-        int app_score=100;
+        int app_score=30;
         if (appTable.containsKey(open)) {
             app_cate = appTable.get(open);
 
             if ( cateTable.containsKey(app_cate)) app_score = cateTable.get(app_cate);
+            else app_score = 20;
         }
+
 
 
 
@@ -475,7 +495,8 @@ public class AppLockService extends Service {
 
         //String cate = readFromFile("category.txt");
         //Log.v ("cate+", l.get);
-
+        if( List_CAtegoriy.UPDATING = true )
+            Log.d("factors", List_CAtegoriy.UPDATEINFO);
 
         Log.v("factors", "app: " + open + "\n" + "wifi: " + curWifi + wifiTable.keySet() + " " + wifi_score + "\n"
                 + "location: " + locationStatus + "\n"
@@ -489,7 +510,7 @@ public class AppLockService extends Service {
         //data collection
         DataCollection d=new DataCollection(this);
         String androidId = Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
-        d.collectData(curWifi,wifi_score,locationStatus,blueToothStatus,onBodyStatus,xFactor,app_cate,app_score,androidId,getTopPackageName());
+        d.collectData(curWifi,wifi_score,locationStatus,blueToothStatus,onBodyStatus,xFactor,app_cate,app_score,androidId,getTopPackageName(),WifiService.confirmWifi);
 
 
 
@@ -791,7 +812,11 @@ public class AppLockService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy: (mAllowRestart=" + mAllowRestart + ")");
+        Log.d(TAG, "onDestroy: (mAllowRestart=" + mAllowRestart + ")" + "mbound: " + mBound);
+        if (mBound){ this.unbindService( mConnection);
+                    }
+
+
         if (mScreenReceiver != null)
             unregisterReceiver(mScreenReceiver);
         if (mShowNotification)

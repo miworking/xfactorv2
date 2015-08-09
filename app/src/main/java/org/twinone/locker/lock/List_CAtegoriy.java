@@ -37,7 +37,10 @@ import java.util.Map;
 
 
 public class List_CAtegoriy extends Activity {
+    public static boolean UPDATING = false;
+    public static String UPDATEINFO = "NOT STARTED";
 
+    private HashMap<String, Boolean> updateLog ;
     TextView text=null;
     ListView listView;
 
@@ -46,14 +49,15 @@ public class List_CAtegoriy extends Activity {
         Log.d("test", "List_CAtegoriy called");
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_catergory);
+        //setContentView(R.layout.list_catergory);
 
         final CategoryTable values = new CategoryTable();
 
         //retrieve a list of all packages currently on the phone
         RetrievePackages r = new RetrievePackages(this);
         final List<String> packages = r.getPackages();
-        Collections.shuffle(packages);
+
+        //Collections.shuffle(packages);
 
 
         //categorise apps on the phone by hitting the 42matters.com api
@@ -63,16 +67,22 @@ public class List_CAtegoriy extends Activity {
         Thread t= new Thread(new Runnable() {
             @Override
             public void run() {
+                UPDATING = true;
+
                 int i=0;
                 Log.d("test", "package size = "+packages.size());
 
                 while(i<packages.size()) {
                     try {
-                        Thread.sleep(5000);
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     c.categorise_app(packages.get(i));
+                    UPDATEINFO = "updating: "+i+"/"+ packages.size();
+
+                   // Toast.makeText(List_CAtegoriy.this, UPDATEINFO, Toast.LENGTH_SHORT).show();
+
                     i++;
                 }
 
@@ -105,6 +115,10 @@ public class List_CAtegoriy extends Activity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                UPDATING = false;
+                UPDATEINFO = "FINISHED";
+//trigger
+
 
             }
         });
@@ -112,7 +126,7 @@ public class List_CAtegoriy extends Activity {
 
 
         //display the list of package names along with category
-        listView = (ListView) findViewById(R.id.listx);
+        //listView = (ListView) findViewById(R.id.listx);
 
         Log.d("test", "step1");
 
@@ -122,18 +136,27 @@ public class List_CAtegoriy extends Activity {
         List<String> l = new ArrayList<String>();
         try{
             readFile(l);
-            Log.d("test", "step1");
+            if (!(l.size()==packages.size())){
+                Log.d("list", "not right");
+                t.start();
+
+            }
+
+            Log.d("list", "is right");
         }catch(IOException e){
             t.start();
+         //   Toast.makeText(this, "updating   ", Toast.LENGTH_SHORT).show();
+
         }
-        values_of_list=l.toArray(new String[l.size()]);
 
-
-
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values_of_list);
-        listView.setAdapter(adapter);
+//        values_of_list=l.toArray(new String[l.size()]);
+//
+//
+//
+//
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_list_item_1, android.R.id.text1, values_of_list);
+//        listView.setAdapter(adapter);
 
 
 
@@ -199,7 +222,7 @@ public class List_CAtegoriy extends Activity {
         super.onStart();
 
         //display the list of package names along with category
-        listView = (ListView) findViewById(R.id.listx);
+        //listView = (ListView) findViewById(R.id.listx);
 
 
         String[] values_of_list;
@@ -213,10 +236,13 @@ public class List_CAtegoriy extends Activity {
 
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values_of_list);
-        listView.setAdapter(adapter);
+       // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+             //   android.R.layout.simple_list_item_1, android.R.id.text1, values_of_list);
+        //listView.setAdapter(adapter);
 
 
     }
+
+
+
 }

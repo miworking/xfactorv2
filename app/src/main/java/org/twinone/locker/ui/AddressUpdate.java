@@ -222,7 +222,7 @@ Log.i("Context", String.valueOf(c));
             if ( mCurrentLocation != null) {
                 // Determine whether a Geocoder is available.
                 if (!Geocoder.isPresent()) {
-                    Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
                     return;
                 }
                 // It is possible that the user presses the button to get the address before the
@@ -258,7 +258,7 @@ Log.i("Context", String.valueOf(c));
         // Pass the location data as an extra to the service.
         intent.putExtra(Constants.LOCATION_DATA_EXTRA, mCurrentLocation);
 
-        Toast.makeText(c,"-----"+mCurrentLocation.getLatitude(),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(c,"-----"+mCurrentLocation.getLatitude(),Toast.LENGTH_SHORT).show();
 
         Log.i("inside strtintenservice", "" + mCurrentLocation.getLatitude());
         Log.i("inside strtintenservice",""+mCurrentLocation.getLongitude());
@@ -314,7 +314,7 @@ Log.i("Context", String.valueOf(c));
         if (mCurrentLocation != null) {
             // Determine whether a Geocoder is available.
             if (!Geocoder.isPresent()) {
-                Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
+                //Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
                 return;
             }
             // It is possible that the user presses the button to get the address before the
@@ -502,7 +502,7 @@ class AddressResultReceiver extends ResultReceiver {
                 }else{
                     home.put(mAddressOutput,1);
                 }
-                Toast.makeText(c,homeAddress,Toast.LENGTH_LONG).show();
+                //Toast.makeText(c,homeAddress,Toast.LENGTH_LONG).show();
                 Log.i("HOME LEARNED", homeAddress);
                 Log.i("home map size",Integer.toString(homesize));
                 for(String s:home.keySet()){
@@ -531,7 +531,7 @@ class AddressResultReceiver extends ResultReceiver {
                 }else{
                     work.put(mAddressOutput,1);
                 }
-                Toast.makeText(c,workAddress,Toast.LENGTH_LONG).show();
+               // Toast.makeText(c,workAddress,Toast.LENGTH_LONG).show();
                 Log.i("WORK LEARNED", workAddress);
                 Log.i("Work map size",Integer.toString(worksize));
                 for(String s:work.keySet()){
