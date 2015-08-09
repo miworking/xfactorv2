@@ -1,7 +1,9 @@
 package org.twinone.locker.ui;
 
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Geocoder;
 import android.location.Location;
@@ -10,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.ResultReceiver;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -222,7 +225,7 @@ Log.i("Context", String.valueOf(c));
             if ( mCurrentLocation != null) {
                 // Determine whether a Geocoder is available.
                 if (!Geocoder.isPresent()) {
-                    Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
                     return;
                 }
                 // It is possible that the user presses the button to get the address before the
@@ -258,7 +261,7 @@ Log.i("Context", String.valueOf(c));
         // Pass the location data as an extra to the service.
         intent.putExtra(Constants.LOCATION_DATA_EXTRA, mCurrentLocation);
 
-        Toast.makeText(c,"-----"+mCurrentLocation.getLatitude(),Toast.LENGTH_SHORT).show();
+       // Toast.makeText(c,"-----"+mCurrentLocation.getLatitude(),Toast.LENGTH_SHORT).show();
 
         Log.i("inside strtintenservice", "" + mCurrentLocation.getLatitude());
         Log.i("inside strtintenservice",""+mCurrentLocation.getLongitude());
@@ -289,10 +292,6 @@ Log.i("Context", String.valueOf(c));
         Log.i(TAG, "Connection failed: ConnectionResult.getErrorCode() = " + result.getErrorCode());
     }
 
-
-
-
-
     /**
      * Callback that fires when the location changes.
      */
@@ -314,14 +313,10 @@ Log.i("Context", String.valueOf(c));
         if (mCurrentLocation != null) {
             // Determine whether a Geocoder is available.
             if (!Geocoder.isPresent()) {
-                Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
+//                Toast.makeText(c, "no geocoder available", Toast.LENGTH_LONG).show();
                 return;
             }
-            // It is possible that the user presses the button to get the address before the
-            // GoogleApiClient object successfully connects. In such a case, mAddressRequested
-            // is set to true, but no attempt is made to fetch the address (see
-            // fetchAddressButtonHandler()) . Instead, we start the intent service here if the
-            // user has requested an address, since we now have a connection to GoogleApiClient.
+
 
             startIntentService();
 
@@ -340,25 +335,13 @@ Log.i("Context", String.valueOf(c));
 
     private void updateUI() {
 
-//        mLatitudeTextView.setText(String.valueOf(mCurrentLocation.getLatitude()));
-//        //Log.i("Latitude",String.valueOf(mCurrentLocation.getLatitude() ));
-//        mLongitudeTextView.setText(String.valueOf(mCurrentLocation.getLongitude()));
-//        mLastUpdateTimeTextView.setText(mLastUpdateTime);
-        //  mResultReceiver.displayAddressOutput();
+
     }
 
 
 
 
-//
-//    //Function to check external media writable or not
-//    public boolean isExternalStorageWritable() {
-//        String state = Environment.getExternalStorageState();
-//        if (Environment.MEDIA_MOUNTED.equals(state)) {
-//            return true;
-//        }
-//        return false;
-//    }
+
 
     /**
      * Requests location updates from the FusedLocationApi.
@@ -420,6 +403,8 @@ class AddressResultReceiver extends ResultReceiver {
 
     HashMap<String,Integer> home= new HashMap<>();
     HashMap<String,Integer> work= new HashMap<>();
+    LRU homeCache= new LRU(3,0.1f);
+    LRU workCache= new LRU(3,0.1f);
     String homeAddress="";
     String workAddress="";
 
@@ -444,18 +429,21 @@ class AddressResultReceiver extends ResultReceiver {
         Log.v("LOC work", workAddress);
         Log.v("LOC curr",mAddressOutput);
 
-        if(!mAddressOutput.equals("") && mAddressOutput.equals(homeAddress)){
+        if(!mAddressOutput.equals("") && homeCache.containsKey(mAddressOutput)){
             //Zero is home
             //One in work
             //2 ins NA
 //            Toast.makeText(c, "here 2", Toast.LENGTH_SHORT).show();
         Log.v("CHECK","1");
             data.setStatus(0);
-        }else if(!mAddressOutput.equals("") && mAddressOutput.equals(workAddress)){
+        }else if(!mAddressOutput.equals("") && workCache.containsKey(mAddressOutput)){
              data.setStatus(1);
             Log.v("CHECK", "2");
-        }else data.setStatus(2);
-        Log.v("CHECK","3");
+        }else {
+            data.setStatus(2);
+            Log.v("CHECK", "3");
+        }
+
         Log.i("Mad Output YAYAYA",mAddressOutput);
         // displayAddressOutput();
 
@@ -471,30 +459,66 @@ class AddressResultReceiver extends ResultReceiver {
 //           protected void displayAddressOutput() {
 //               mLocationAddressTextView.setText(mAddressOutput);
 //           }
+private void openAlert(final String address, final String name, Context c) {
 
+    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(c);
+    // set title
+    alertDialogBuilder.setTitle("GPS Address");
+
+    // set dialog message
+    alertDialogBuilder
+            .setMessage("Is "+address+" your "+name+" location?")
+            .setCancelable(false)
+            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // if this button is clicked, close
+                    if (name.equals("home")) {
+                        homeAddress = address;
+                        homeCache.put(address, 10);
+                    } else {
+                        workAddress = address;
+                        workCache.put(address, 8);
+                    }
+                    dialog.dismiss();
+                }
+            })
+            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.dismiss();
+                }
+            });
+
+    // create alert dialog
+    AlertDialog alertDialog = alertDialogBuilder.create();
+    alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+
+    // show it
+    alertDialog.show();
+}
 
     public void addressStore(Context c){
         Log.i("New Vrsn ADDRESS 1",mAddressOutput);
         //Added by: Abhishek Shukla (25 JULY)
         //code for capturing every hour address
-        //it can enter this loop only once in every hour
+        //it can enter this loop only thrice in every hour
         //convert current time into date and extract 24 hours
-        if(System.currentTimeMillis()-t1>15 ) {
-            Date date = new Date(t1);
-            DateFormat formatter = new SimpleDateFormat("HH:mm:ss:SSS");
+        if(System.currentTimeMillis()-t1>1200000){
+
+                   Date date = new Date(t1);
+         DateFormat formatter = new SimpleDateFormat("HH:mm:ss:SSS");
             String dateFormatted = formatter.format(date);
             int hour = date.getHours();
             //Logoc to find home and work location
             //home is defined as place where device live at 0,1,2,3,4,5 hours of day
             // so we take sample of three days , and place with minimum 12 out of 18 is taken as home
             // similarly for office we do it, for 11,12,13,14,15,16
-            //if(hour<=5 && hour>=0)
+            if(hour<=5 && hour>=0)
             {
                 int homesize=0;
                 for(int i:home.values()){
                     homesize+=i;
                 }
-                if(homesize>18)
+                if(homesize>36)
                     home.clear();
                 if(home.containsKey(mAddressOutput)){
                     int temp= home.get(mAddressOutput);
@@ -502,28 +526,30 @@ class AddressResultReceiver extends ResultReceiver {
                 }else{
                     home.put(mAddressOutput,1);
                 }
-                Toast.makeText(c,homeAddress,Toast.LENGTH_LONG).show();
+                //Toast.makeText(c,homeAddress,Toast.LENGTH_LONG).show();
                 Log.i("HOME LEARNED", homeAddress);
                 Log.i("home map size",Integer.toString(homesize));
                 for(String s:home.keySet()){
                     Log.i("Current S",s);
-
                     int freq=home.get(s);
-                    if(freq>2){
+                    if(freq>15){
                         //set home addresss as S
-                        homeAddress=s;
+                        //update home address  only when it is different from previous location
+                        if(!homeAddress.equals(s))
+                        openAlert(s,"home",c);
+//                        homeAddress=s;
+//                        homeCache.put(s,10);
                     }
-
                 }
             }
             //office location learning
-            //if(hour>=16 && hour<=11)
+            if(hour>=16 && hour<=11)
             {
                 int worksize=0;
                 for(int i:work.values()){
                     worksize+=i;
                 }
-                if(worksize>18)
+                if(worksize>36)
                     work.clear();
                 if(work.containsKey(mAddressOutput)){
                     int temp= work.get(mAddressOutput);
@@ -531,27 +557,22 @@ class AddressResultReceiver extends ResultReceiver {
                 }else{
                     work.put(mAddressOutput,1);
                 }
-                Toast.makeText(c,workAddress,Toast.LENGTH_LONG).show();
-                Log.i("WORK LEARNED", workAddress);
+                //Toast.makeText(c,workAddress,Toast.LENGTH_LONG).show();
+
                 Log.i("Work map size",Integer.toString(worksize));
                 for(String s:work.keySet()){
                     int freq=work.get(s);
-                    if(freq>2){
+                    if(freq>15){
                         //set home addresss as S
-                        workAddress=s;
+                        if(!workAddress.equals(s))
+                        openAlert(s,"work",c);
+//                        workAddress=s;
+//                        workCache.put(s,8);
                     }
-
                 }
             }
-
-
-
-
-
-
             //update t1 with current time
             t1 = System.currentTimeMillis();
-
         }//if ends here
     }
 }

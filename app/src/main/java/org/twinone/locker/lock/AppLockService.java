@@ -431,11 +431,6 @@ public class AppLockService extends Service {
         Toast.makeText(this, " here ", Toast.LENGTH_SHORT).show();
         onbody b=new onbody(this);
 
-
-
-
-
-
         boolean bt = mService.hasTrustedDevices();
         int xFactor = 1;
 
@@ -448,11 +443,13 @@ public class AppLockService extends Service {
         String curWifi = wifi.getConnectionInfo().getSSID();
         if (wifiTable.containsKey(curWifi)) wifi_score = wifiTable.get(curWifi);
 
-        int intGps=LocationData.getInstance().getStatus();;
+        int intGps=LocationData.getInstance().getStatus();
+
         String locationStatus = ""+intGps;
+
         int gps_score = 0;
         if (gpsTable.containsKey(intGps)) gps_score = gpsTable.get(intGps);
-
+        Log.v("Abhishek Score",Integer.toString(gps_score));
 
         String blueToothStatus = ""+bt;
         int bt_score = bt? 5:0;
