@@ -447,11 +447,15 @@ public class AppLockService extends Service {
     }
 
     private void onLockedAppOpen(final String open) {
+<<<<<<< HEAD
         //list_category.validate();
         //if package.size = file.map.size do nothing
         //else start t to undate file( size is not right and no file is there
         // when finish set UPDATING to false
 
+=======
+        Toast.makeText(this, " here ", Toast.LENGTH_SHORT).show();
+>>>>>>> origin/master
         onbody b=new onbody(this);
 
         boolean bt = mService.hasTrustedDevices();
@@ -466,11 +470,13 @@ public class AppLockService extends Service {
         String curWifi = wifi.getConnectionInfo().getSSID();
         if (wifiTable.containsKey(curWifi)) wifi_score = wifiTable.get(curWifi);
 
-        int intGps=LocationData.getInstance().getStatus();;
+        int intGps=LocationData.getInstance().getStatus();
+
         String locationStatus = ""+intGps;
+
         int gps_score = 0;
         if (gpsTable.containsKey(intGps)) gps_score = gpsTable.get(intGps);
-
+        Log.v("Abhishek Score",Integer.toString(gps_score));
 
         String blueToothStatus = ""+bt;
         int bt_score = bt? 28:0;
@@ -511,6 +517,7 @@ public class AppLockService extends Service {
         DataCollection d=new DataCollection(this);
         String androidId = Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
         d.collectData(curWifi,wifi_score,locationStatus,blueToothStatus,onBodyStatus,xFactor,app_cate,app_score,androidId,getTopPackageName(),WifiService.confirmWifi);
+
 
 
 
