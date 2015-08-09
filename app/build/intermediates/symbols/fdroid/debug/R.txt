@@ -629,6 +629,7 @@ int drawable switch_background 0x7f0200a2
 int drawable switch_off_bg 0x7f0200a3
 int drawable switch_on_bg 0x7f0200a4
 int drawable switch_track 0x7f0200a5
+int drawable x_logo 0x7f0200a6
 int id action_bar 0x7f0b0060
 int id action_bar_activity_content 0x7f0b0000
 int id action_bar_container 0x7f0b005f

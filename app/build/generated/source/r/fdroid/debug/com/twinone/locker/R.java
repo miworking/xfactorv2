@@ -2053,6 +2053,7 @@ containing a value of this type.
         public static final int switch_off_bg=0x7f0200a3;
         public static final int switch_on_bg=0x7f0200a4;
         public static final int switch_track=0x7f0200a5;
+        public static final int x_logo=0x7f0200a6;
     }
     public static final class id {
         public static final int action_bar=0x7f0b0060;

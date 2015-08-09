@@ -97,15 +97,14 @@
         android:required="true" />
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
- <!-- 2303 -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" /> <!-- 2303 -->
     <!-- Take pictures of intruder -->
     <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
     <!--  -->
     <application
         android:name="org.twinone.locker.lock.ParseApplication"
         android:allowBackup="false"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/x_logo"
         android:label="@string/application_name"
         android:theme="@style/AppTheme" >
 
@@ -149,7 +148,7 @@
             android:theme="@android:style/Theme.Translucent" />
         <activity
             android:name="org.twinone.locker.lock.List_CAtegoriy"
-            android:theme="@android:style/Theme.Dialog"
+            android:theme="@android:style/Theme.NoDisplay"
             android:uiOptions="splitActionBarWhenNarrow" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
