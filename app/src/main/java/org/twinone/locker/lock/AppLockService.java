@@ -447,15 +447,12 @@ public class AppLockService extends Service {
     }
 
     private void onLockedAppOpen(final String open) {
-<<<<<<< HEAD
         //list_category.validate();
         //if package.size = file.map.size do nothing
         //else start t to undate file( size is not right and no file is there
         // when finish set UPDATING to false
 
-=======
-        Toast.makeText(this, " here ", Toast.LENGTH_SHORT).show();
->>>>>>> origin/master
+
         onbody b=new onbody(this);
 
         boolean bt = mService.hasTrustedDevices();
