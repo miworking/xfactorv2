@@ -6,4 +6,4 @@
     <item android:drawable="@drawable/switch_on_bg" android:state_checked="true"/>
     <item android:drawable="@drawable/switch_off_bg"/>
 
-</selector><!-- From: file:/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/src/main/res/drawable/switch_background.xml -->
+</selector><!-- From: file:/C:/Users/Skandy/Documents/GitHub/XfactorV1/app/src/main/res/drawable/switch_background.xml -->

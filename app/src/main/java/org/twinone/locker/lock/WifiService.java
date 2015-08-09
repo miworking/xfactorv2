@@ -62,7 +62,7 @@ public class WifiService extends Service {
 
 
         //test
-        Toast.makeText(this, "updating....", Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this, "updating....", Toast.LENGTH_SHORT).show();
 
         try {
             InputStream is = openFileInput("wifiLog");
@@ -267,7 +267,7 @@ public class WifiService extends Service {
 
         if (wifi.isWifiEnabled() == false)
         {
-            Toast.makeText(getApplicationContext(), "wifi is disabled..making it enabled", Toast.LENGTH_LONG).show();
+           // Toast.makeText(getApplicationContext(), "wifi is disabled..making it enabled", Toast.LENGTH_LONG).show();
            // mLogFragment.getLogView().setText("wifi is disabled..making it enabled");
 
             wifi.setWifiEnabled(true);
@@ -280,7 +280,7 @@ public class WifiService extends Service {
         results = wifi.getScanResults();
         size = results.size();
 
-        Toast.makeText(this, "Scanning...." + size, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "Scanning...." + size, Toast.LENGTH_SHORT).show();
      //   mLogFragment.getLogView().setText("Scanning...");
         String currentNet = wifi.getConnectionInfo().getSSID();
         int currentIp = wifi.getConnectionInfo().getIpAddress();
@@ -354,7 +354,7 @@ public class WifiService extends Service {
         //mNM.cancel(NOTIFICATION);
 
         // Tell the user we stopped.
-        Toast.makeText(this, "service stopped", Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this, "service stopped", Toast.LENGTH_SHORT).show();
     }
 
     @Override

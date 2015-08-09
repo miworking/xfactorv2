@@ -5,12 +5,14 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.app.ActivityManager.RunningTaskInfo;
 import android.app.AlarmManager;
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
@@ -21,8 +23,11 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+import android.view.WindowManager;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.twinone.locker.R;
@@ -472,12 +477,21 @@ public class AppLockService extends Service {
         //Log.v ("cate+", l.get);
 
 
-        Log.v("factors","app: "+open+"\n"+"wifi: "+ curWifi+wifiTable.keySet()+" "+wifi_score+"\n"
-                        +"location: "+locationStatus+"\n"
-                        +"bluetooth: "+blueToothStatus+"\n"
-                        +"onbody: "+onBodyStatus+"\n"
-                        +"XFacor: "+xFactor+"\n"
-                        +"appScore: "+app_cate+" "+app_score);
+        Log.v("factors", "app: " + open + "\n" + "wifi: " + curWifi + wifiTable.keySet() + " " + wifi_score + "\n"
+                + "location: " + locationStatus + "\n"
+                + "bluetooth: " + blueToothStatus + "\n"
+                + "onbody: " + onBodyStatus + "\n"
+                + "XFacor: " + xFactor + "\n"
+                + "appScore: " + app_cate + " " + app_score);
+
+
+
+        //data collection
+        DataCollection d=new DataCollection(this);
+        String androidId = Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
+        d.collectData(curWifi,wifi_score,locationStatus,blueToothStatus,onBodyStatus,xFactor,app_cate,app_score,androidId,getTopPackageName());
+
+
 
 
 
@@ -504,6 +518,8 @@ public class AppLockService extends Service {
         }
         removeRelockTimer(open);
     }
+
+
 
     private void showInterstitial() {
         if (!new DefaultAdInterface().adsEnabled()) return;

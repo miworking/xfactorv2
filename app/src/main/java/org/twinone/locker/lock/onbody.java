@@ -32,7 +32,8 @@ public class onbody implements SensorEventListener {
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
 //        Toast.makeText(con,"CONSTRUCTOR", Toast.LENGTH_SHORT).show();
-        Log.w("ONBODY","CONSTRUCTOR");
+      //
+      //  Log.w("ONBODY","CONSTRUCTOR");
 
     }
 
@@ -68,27 +69,27 @@ public class onbody implements SensorEventListener {
                 {
                     if ((deltaX > 3 || deltaY > 3 || deltaZ > 3))
                     {
-                        Log.w("GZ",String.valueOf(gravityZ));
+                      //  Log.w("GZ",String.valueOf(gravityZ));
                         onBody = true;
                         t1 = System.currentTimeMillis();
-                        Log.w("ONBODY", "TRUE");
+                   //     Log.w("ONBODY", "TRUE");
                     }
                 }
                 else{
-                    Log.w("GZ",String.valueOf(gravityZ));
+                 //   Log.w("GZ",String.valueOf(gravityZ));
                     onBody = true;
                     t1 = System.currentTimeMillis();
-                    Log.w("ONBODY", String.valueOf(onBody));
+                 //   Log.w("ONBODY", String.valueOf(onBody));
                 }
                 // Toast.makeText(con,"ONBODY TRUE", Toast.LENGTH_SHORT).show();
             }else{
                 //check time before making it false
                 if(System.currentTimeMillis()-t1>10000){
                     onBody=false;
-                    Log.w("ONBODY",String.valueOf(onBody));
+           //         Log.w("ONBODY",String.valueOf(onBody));
                     //Toast.makeText(con,"ONBODY FALSE", Toast.LENGTH_SHORT).show();
                 }else{
-                    Log.w("ONBODY", String.valueOf(onBody));
+             //       Log.w("ONBODY", String.valueOf(onBody));
                     //Toast.makeText(con,"ONBODY WAITING", Toast.LENGTH_SHORT).show();
                 }
             }

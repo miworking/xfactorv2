@@ -74,7 +74,7 @@ public class BluetoothService extends Service {
             String action = intent.getAction();
             if(BluetoothDevice.ACTION_FOUND.equals(action)) {
                 int  rssi = intent.getShortExtra(BluetoothDevice.EXTRA_RSSI,Short.MIN_VALUE);
-                Toast.makeText(getApplicationContext(),"  RSSI: " + rssi + "dBm", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getApplicationContext(),"  RSSI: " + rssi + "dBm", Toast.LENGTH_SHORT).show();
             }
         }
     };
@@ -82,7 +82,7 @@ public class BluetoothService extends Service {
     // Keep updating Bluetooth paired condition
     private void update(){
 
-        Toast.makeText(this, "updating....", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "updating....", Toast.LENGTH_SHORT).show();
         function();
 
         Calendar c = Calendar.getInstance();
@@ -108,8 +108,8 @@ public class BluetoothService extends Service {
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         if (bluetoothAdapter == null) {
-            Toast.makeText(this, "No Bluetooth",
-                    Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "No Bluetooth",
+              //      Toast.LENGTH_LONG).show();
         }
         else if(!bluetoothAdapter.isEnabled()) {
 //            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
@@ -136,25 +136,25 @@ public class BluetoothService extends Service {
 //                            Toast.LENGTH_LONG).show();
 //                }
 //            }
-            Toast.makeText(this, "Bluetooth is disabled.",
+          /*  Toast.makeText(this, "Bluetooth is disabled.",
                     Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "Bluetooth is already on.",
+        */} else {
+           /* Toast.makeText(this, "Bluetooth is already on.",
                     Toast.LENGTH_LONG).show();
-
+*/
             if(pairedWithBluetooth()) {
 
                 if (hasTrustedDevices()) {
-                    Toast.makeText(this, "Paired with trusted device.",
+                 /*   Toast.makeText(this, "Paired with trusted device.",
                             Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(this, "Do not paired with trusted device.",
+              */  } else {
+                   /* Toast.makeText(this, "Do not paired with trusted device.",
                             Toast.LENGTH_LONG).show();
-                }
+                */}
             } else {
-                Toast.makeText(this, "Unpaired.",
+               /* Toast.makeText(this, "Unpaired.",
                         Toast.LENGTH_LONG).show();
-            }
+           */ }
 
         }
     }
@@ -175,14 +175,14 @@ public class BluetoothService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         // Let it continue running until it is stopped.
-        Toast.makeText(this, "Bluetooth Service Started", Toast.LENGTH_LONG).show();
+      //  Toast.makeText(this, "Bluetooth Service Started", Toast.LENGTH_LONG).show();
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "Bluetooth Service Destroyed", Toast.LENGTH_LONG).show();
+      //  Toast.makeText(this, "Bluetooth Service Destroyed", Toast.LENGTH_LONG).show();
     }
 
     // If paired with Bluetooth, check if this is a known device. If not, pop up alert dialog.

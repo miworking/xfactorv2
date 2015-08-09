@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/ThomasZhao/Documents/Practicum/AppLocker-master/app/src/main/res/values-large-land/layout.xml -->
+    <!-- From: file:/C:/Users/Skandy/Documents/GitHub/XfactorV1/app/src/main/res/values-large-land/layout.xml -->
     <eat-comment/>
     <item name="layout_alias_locker" type="layout">@layout/activity_locker</item>
 </resources>
