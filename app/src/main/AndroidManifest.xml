@@ -93,7 +93,7 @@
     <!--  -->
     <application
         android:allowBackup="false"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/x_logo"
         android:label="@string/application_name"
         android:theme="@style/AppTheme">
 
