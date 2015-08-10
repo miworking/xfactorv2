@@ -54,7 +54,7 @@ public class Categorise {
         String parameters = "p="+packagename;
 
         // Building the url to the web service
-        String url = "https://42matters.com/api/1/apps/lookup.json?access_token=18540ef506eb19ad05870bb3fb87414fcadfa809&"+parameters;
+        String url = "https://42matters.com/api/1/apps/lookup.json?access_token=07ecad9956c3a6585e2cf5d4d1b32a0969fee69a&"+parameters;
 
         Log.d("response is :", url);
 
@@ -96,6 +96,10 @@ public class Categorise {
                 output = j.getString("category");
                 values.put(pack,output);
             } catch (JSONException e) {
+                values.put(pack,"N/A");
+
+                Log.d("c--------ategory","give value here");
+
                 e.printStackTrace();
             }
 

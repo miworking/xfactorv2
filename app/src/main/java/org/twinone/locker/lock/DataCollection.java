@@ -105,7 +105,9 @@ public class DataCollection
         String parts[] = packageName.split("\\.");
         String appName = "N/A";
         if(parts.length>0)  appName =  parts[(parts.length-1)];
-        t.setText("App Name is: " +appName+ "\n"+"Current Condition is:" + "\n" + "WiFi Status:" + curWifi + "\n" + "Location Status:" + locationStatus + "\n" + "Bluetooth Status:" + blueToothStatus + "\n" + "OnBody Status:" + onBodyStatus+"\n"+"Do you want to open this app under these conditions, Choose Below ");
+        t.setText("App Name is: " + appName + "\n" + "Current Condition is:" + "\n" + "WiFi Status:" + curWifi + "\n" + "Location Status:" + locationStatus + "\n" + "Bluetooth Status:" + blueToothStatus + "\n" + "OnBody Status:" + onBodyStatus + "\n" + "Do you want to open this app under these conditions, Choose Below ");
+
+
         t.setTypeface(null, Typeface.BOLD);
         t.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
        // t.setTextColor(0xFF00FF00);
@@ -120,15 +122,15 @@ public class DataCollection
 
 
 
-        final Spinner spinner = new Spinner(c);
-        ArrayList<String> spinnerArray = new ArrayList<String>();
-        spinnerArray.add("yes");
-        spinnerArray.add("no");
-        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(c, android.R.layout.simple_spinner_item, spinnerArray); //selected item will look like a spinner set from XML
-        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(spinnerArrayAdapter);
-        spinner.setBackgroundColor(0xffff0000);
-        layout.addView(spinner);
+//        final Spinner spinner = new Spinner(c);
+//        ArrayList<String> spinnerArray = new ArrayList<String>();
+//        spinnerArray.add("yes");
+//        spinnerArray.add("no");
+//        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(c, android.R.layout.simple_spinner_item, spinnerArray); //selected item will look like a spinner set from XML
+//        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner.setAdapter(spinnerArrayAdapter);
+//        spinner.setBackgroundColor(0xffff0000);
+//        layout.addView(spinner);
 
 
 
@@ -138,50 +140,73 @@ public class DataCollection
         popDialog.setView(layout);
 
         // Button OK
-        popDialog.setPositiveButton(android.R.string.ok,
+        popDialog.setPositiveButton("No",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         //txtView.setText(String.valueOf(rating.getProgress()));
-                        dialog.dismiss();
-                        Log.d("----------------",""+rating.getRating() + spinner.getSelectedItem().toString());
+
+                       // Log.d("----------------", "" + rating.getRating() + spinner.getSelectedItem().toString());
 
 
                         //upload to parse
                         ParseObject testObject = new ParseObject("RatingData");
                         testObject.put("DeviceId", androidId);
-                        testObject.put("PackageName",packageName);
-                        testObject.put("WantToBeOpened",spinner.getSelectedItem().toString());
-                        testObject.put("Rating",rating.getRating());
+                        testObject.put("PackageName", packageName);
+                        //testObject.put("WantToBeOpened",spinner.getSelectedItem().toString());
+                        testObject.put("WantToBeOpened", "No");
+                        testObject.put("Rating", rating.getRating());
                         testObject.put("CurrentWiFi", curWifi);
                         testObject.put("WiFiScore", wifi_score);
-                        testObject.put("Location",locationStatus);
-                        testObject.put("Bluetooth",blueToothStatus);
-                        testObject.put("OnBody",onBodyStatus);
-                        testObject.put("Xfactor",xFactor);
-                        testObject.put("Category",app_cate);
-                        testObject.put("confirmWifiValue",confirmWifi);
-                        testObject.put("CurrentScore",app_score);
+                        testObject.put("Location", locationStatus);
+                        testObject.put("Bluetooth", blueToothStatus);
+                        testObject.put("OnBody", onBodyStatus);
+                        testObject.put("Xfactor", xFactor);
+                        testObject.put("Category", app_cate);
+                        testObject.put("confirmWifiValue", confirmWifi);
+                        testObject.put("CurrentScore", app_score);
                         testObject.saveInBackground();
-
+                        dialog.dismiss();
 
                     }
 
-                });
+                })// Button Cancel
+                        .setNegativeButton("Yes",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
 
-                /*// Button Cancel
-                .setNegativeButton("Cancel",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });*/
-        // popDialog.create();
-        AlertDialog alertDialog = popDialog.create();
+                                        //upload to parse
+                                        ParseObject testObject = new ParseObject("RatingData");
+                                        testObject.put("DeviceId", androidId);
+                                        testObject.put("PackageName", packageName);
+                                        //testObject.put("WantToBeOpened",spinner.getSelectedItem().toString());
+                                        testObject.put("WantToBeOpened", "Yes");
+                                        testObject.put("Rating", rating.getRating());
+                                        testObject.put("CurrentWiFi", curWifi);
+                                        testObject.put("WiFiScore", wifi_score);
+                                        testObject.put("Location", locationStatus);
+                                        testObject.put("Bluetooth", blueToothStatus);
+                                        testObject.put("OnBody", onBodyStatus);
+                                        testObject.put("Xfactor", xFactor);
+                                        testObject.put("Category", app_cate);
+                                        testObject.put("confirmWifiValue", confirmWifi);
+                                        testObject.put("CurrentScore", app_score);
+                                        testObject.saveInBackground();
+                                        dialog.dismiss();
+
+
+                                        dialog.cancel();
+                                    }
+                                });
+        String appStatus =  appName+  curWifi + locationStatus  + blueToothStatus+onBodyStatus;
+        if (AppLockService.appSet.add(appStatus)) {
+            // popDialog.create();
+            AlertDialog alertDialog = popDialog.create();
         /*alertDialog.getWindow().setBackgroundDrawable(
                 new ColorDrawable(Color.LTGRAY));*/
-        alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+            alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
 
-        alertDialog.show();
+            alertDialog.show();
+        }
 
 
     }

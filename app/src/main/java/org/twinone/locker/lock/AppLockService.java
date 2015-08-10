@@ -50,6 +50,7 @@ import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -60,6 +61,8 @@ public class AppLockService extends Service {
     private HashMap<String,Integer> test_appTable;
     private HashMap<String,Integer> cateTable;
     private HashMap<String,String> appTable;
+    public static HashSet<String> appSet;
+
 
 
 
@@ -107,6 +110,7 @@ public class AppLockService extends Service {
         test_appTable = new HashMap<String,Integer>();
         appTable = new HashMap<String,String>();
         cateTable = new HashMap<String,Integer>();
+        appSet = new HashSet<String>();
 
 
 
