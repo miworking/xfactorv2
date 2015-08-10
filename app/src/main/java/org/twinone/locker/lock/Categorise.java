@@ -54,7 +54,7 @@ public class Categorise {
         String parameters = "p="+packagename;
 
         // Building the url to the web service
-        String url = "https://42matters.com/api/1/apps/lookup.json?access_token=1757d1549f167798cfb7441478ab96694cebf92a&"+parameters;
+        String url = "https://42matters.com/api/1/apps/lookup.json?access_token=18540ef506eb19ad05870bb3fb87414fcadfa809&"+parameters;
 
         Log.d("response is :", url);
 

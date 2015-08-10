@@ -451,6 +451,9 @@ public class AppLockService extends Service {
         //if package.size = file.map.size do nothing
         //else start t to undate file( size is not right and no file is there
         // when finish set UPDATING to false
+        ListCategory l=new ListCategory(this);
+        l.validate();
+
 
 
         onbody b=new onbody(this);
