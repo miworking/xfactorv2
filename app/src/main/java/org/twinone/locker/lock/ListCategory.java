@@ -38,6 +38,7 @@ public class ListCategory
     }
 
     public void validate(){
+        if(UPDATING) return;
         Log.d("test", "List_Categoriy called");
         //retrieve a list of all packages currently on the phone
         RetrievePackages r = new RetrievePackages(con);
@@ -46,6 +47,8 @@ public class ListCategory
         Log.d("test", "package size = " + packages.size());
         try {
             Map<String,String> prevState = readFile();
+            Log.d("test", "prevstate size = " + prevState.size());
+
             if(prevState.size()!=packages.size()) {
                 //in case of new packages being added, restart the asynctask to categorise all apps
                 Log.d("status:","Updating new apps that were installed");
@@ -79,17 +82,25 @@ public class ListCategory
                     }
                     c.categorise_app(packages.get(i));
                     UPDATEINFO = "updating: "+i+"/"+ packages.size();
+                    Log.d("test", "package info = "+UPDATEINFO);
 
                     // Toast.makeText(List_CAtegoriy.this, UPDATEINFO, Toast.LENGTH_SHORT).show();
 
                     i++;
                 }
-
+                try {
+                    Thread.sleep(30000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Log.d("values;", "" + v.table.size());
 
                 //write to the file
                 ObjectOutputStream os = null;
                 try {
+
+                    Log.d("test", "writingfile size = "+v.table.size());
+
                     FileOutputStream fos = con.openFileOutput("category.txt", Context.MODE_PRIVATE);
                     os = new ObjectOutputStream(fos);
                     os.writeObject(v);

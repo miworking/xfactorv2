@@ -136,7 +136,7 @@ public class DataCollection
 
 
         //popDialog.setIcon(android.R.drawable.btn_star_big_on);
-        popDialog.setTitle("How secure you feel opening this app?");
+        popDialog.setTitle("How secure you feel opening this app without a password?");
         popDialog.setView(layout);
 
         // Button OK

@@ -33,6 +33,8 @@ public class Categorise {
     public String categorise_app(String pack){
 
         Log.d("test", "categorise_app called");
+        values.put(pack, "Started");
+
 
 
         this.pack=pack;
@@ -52,9 +54,14 @@ public class Categorise {
 
         // Building the parameters to the web service
         String parameters = "p="+packagename;
+        String token1 = "64ece1a5e3ebafbaf608fa830d26028337ab50d6";
+        String token2 = "d02ee3801dc7a749ae21c585bdb80f39cabdff2c";
+        String token3 = "ba9130875e5c3375ae93b83a1ce74953f8c70c12";
+
+
 
         // Building the url to the web service
-        String url = "https://42matters.com/api/1/apps/lookup.json?access_token=07ecad9956c3a6585e2cf5d4d1b32a0969fee69a&"+parameters;
+        String url = "https://42matters.com/api/1/apps/lookup.json?access_token="+token3+"&"+parameters;
 
         Log.d("response is :", url);
 
@@ -92,13 +99,13 @@ public class Categorise {
 
             try {
                 JSONObject j = new JSONObject(result);
-                Log.d("c--------ategory",""+j.get("category"));
+                Log.d("test",pack+":"+j.get("category"));
                 output = j.getString("category");
                 values.put(pack,output);
             } catch (JSONException e) {
-                values.put(pack,"N/A");
+                values.put(pack,"Not Ready");
 
-                Log.d("c--------ategory","give value here");
+                Log.d("test",pack+":"+"give value here");
 
                 e.printStackTrace();
             }

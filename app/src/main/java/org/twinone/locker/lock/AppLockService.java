@@ -98,6 +98,13 @@ public class AppLockService extends Service {
 
 
     }
+    private void updateCate(){
+        try{
+            readFile(appTable);
+        }catch(IOException e){
+            Log.d("test", "read error");
+        }
+    }
 
 
     private void initHashMap(){
@@ -151,7 +158,8 @@ public class AppLockService extends Service {
         cateTable.put("Music & Audio", 25);
         cateTable.put("Libraries & Demo", 25);
         cateTable.put("News & Magazines", 25);
-
+        cateTable.put("Not Ready", 45);
+        cateTable.put("Started", 45);
 
 
 
@@ -455,9 +463,14 @@ public class AppLockService extends Service {
         //if package.size = file.map.size do nothing
         //else start t to undate file( size is not right and no file is there
         // when finish set UPDATING to false
+        try{
+            readFile(appTable);
+        }catch(IOException e){
+            Log.d("test", "read error");
+        }
+
         ListCategory l=new ListCategory(this);
         l.validate();
-
 
 
         onbody b=new onbody(this);
