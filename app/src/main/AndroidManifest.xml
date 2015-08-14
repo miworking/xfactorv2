@@ -175,6 +175,12 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <receiver android:name="org.twinone.locker.lock.AppLockService$PickupReceiver">
+            <intent-filter>
+                <action android:name="org.twinone.locker.pickup.result" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

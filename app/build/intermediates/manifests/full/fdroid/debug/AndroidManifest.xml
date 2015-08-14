@@ -148,7 +148,7 @@
             android:theme="@android:style/Theme.Translucent" />
         <activity
             android:name="org.twinone.locker.lock.List_CAtegoriy"
-            android:theme="@android:style/Theme.NoDisplay"
+            android:theme="@android:style/Theme.Dialog"
             android:uiOptions="splitActionBarWhenNarrow" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -13,6 +11,8 @@ ADDED from AndroidManifest.xml:2:1
 		ADDED from AndroidManifest.xml:4:5
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
 MERGED from com.android.support:appcompat-v7:22.0.0:20:5
@@ -113,12 +113,12 @@ supports-screens
 ADDED from AndroidManifest.xml:11:5
 	android:largeScreens
 		ADDED from AndroidManifest.xml:13:9
-	android:anyDensity
-		ADDED from AndroidManifest.xml:12:9
-	android:normalScreens
-		ADDED from AndroidManifest.xml:14:9
 	android:smallScreens
 		ADDED from AndroidManifest.xml:15:9
+	android:normalScreens
+		ADDED from AndroidManifest.xml:14:9
+	android:anyDensity
+		ADDED from AndroidManifest.xml:12:9
 uses-feature#android.hardware.telephony
 ADDED from AndroidManifest.xml:17:5
 	android:required
@@ -356,12 +356,12 @@ activity#org.twinone.locker.ui.MainActivity
 ADDED from AndroidManifest.xml:110:9
 	android:label
 		ADDED from AndroidManifest.xml:114:13
+	android:excludeFromRecents
+		ADDED from AndroidManifest.xml:113:13
 	android:configChanges
 		ADDED from AndroidManifest.xml:112:13
 	android:theme
 		ADDED from AndroidManifest.xml:115:13
-	android:excludeFromRecents
-		ADDED from AndroidManifest.xml:113:13
 	android:name
 		ADDED from AndroidManifest.xml:111:13
 intent-filter#android.intent.action.MAIN+android.intent.action.SEARCH
@@ -376,10 +376,10 @@ ADDED from AndroidManifest.xml:118:17
 		ADDED from AndroidManifest.xml:118:25
 activity-alias#com.twinone.locker.MainActivityAlias
 ADDED from AndroidManifest.xml:122:9
-	android:label
-		ADDED from AndroidManifest.xml:125:13
 	android:enabled
 		ADDED from AndroidManifest.xml:124:13
+	android:label
+		ADDED from AndroidManifest.xml:125:13
 	android:targetActivity
 		ADDED from AndroidManifest.xml:126:13
 	android:name
@@ -509,19 +509,19 @@ MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
-	android:name
-		ADDED from com.google.android.gms:play-services-base:7.5.0:22:13
 	android:value
 		ADDED from com.google.android.gms:play-services-base:7.5.0:23:13
+	android:name
+		ADDED from com.google.android.gms:play-services-base:7.5.0:22:13
 uses-feature#0x00020000
 ADDED from com.google.android.gms:play-services-maps:7.5.0:24:5
 MERGED from com.google.android.gms:play-services-maps:7.5.0:24:5
 MERGED from com.google.android.gms:play-services-maps:7.5.0:24:5
 MERGED from com.google.android.gms:play-services-maps:7.5.0:24:5
-	android:required
-		ADDED from com.google.android.gms:play-services-maps:7.5.0:26:8
 	android:glEsVersion
 		ADDED from com.google.android.gms:play-services-maps:7.5.0:25:8
+	android:required
+		ADDED from com.google.android.gms:play-services-maps:7.5.0:26:8
 uses-permission#android.permission.GET_ACCOUNTS
 ADDED from com.google.android.gms:play-services-wallet:7.5.0:21:5
 	android:name
@@ -532,10 +532,10 @@ ADDED from com.google.android.gms:play-services-wallet:7.5.0:22:5
 		ADDED from com.google.android.gms:play-services-wallet:7.5.0:22:22
 meta-data#com.google.android.gms.wallet.api.enabled
 ADDED from com.google.android.gms:play-services-wallet:7.5.0:25:9
-	android:name
-		ADDED from com.google.android.gms:play-services-wallet:7.5.0:26:13
 	android:value
 		ADDED from com.google.android.gms:play-services-wallet:7.5.0:27:13
+	android:name
+		ADDED from com.google.android.gms:play-services-wallet:7.5.0:26:13
 receiver#com.google.android.gms.wallet.EnableWalletOptimizationReceiver
 ADDED from com.google.android.gms:play-services-wallet:7.5.0:28:9
 	android:exported
